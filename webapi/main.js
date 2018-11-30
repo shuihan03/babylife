@@ -12,6 +12,13 @@ let accessLogStream = fs.createWriteStream(path.join(__dirname, '../log/access.l
 app.use(morgan('combined', {stream: accessLogStream}));
 
 
+//上传文件支持 ---begin
+var bodyParser = require('body-parser');
+var multer  = require('multer');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(multer({ dest: '/tmp/'}).array('image'));
+//上传文件支持 --end;本部分放在app.use 注册路由之前。否则上传时，req.files[0] 报错
+
 //注册路由
 app.use('/user',userRoot);
 app.use('/view',pageRoot);
@@ -22,10 +29,7 @@ app.get('',function(req,res){
 })
 
 
-var bodyParser = require('body-parser');
-var multer  = require('multer');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(multer({ dest: '/tmp/'}).array('image'));
+
 
 var server = app.listen(8081, function () {
 
