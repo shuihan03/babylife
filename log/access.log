@@ -1,0 +1,4 @@
+::1 - - [30/Nov/2018:03:13:46 +0000] "GET /gao/gao HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
+::1 - - [30/Nov/2018:03:19:07 +0000] "GET /user/gao HTTP/1.1" 404 147 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
+::1 - - [30/Nov/2018:03:19:34 +0000] "GET /user/getuser?id=1 HTTP/1.1" 404 151 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
+::1 - - [30/Nov/2018:03:20:02 +0000] "GET /user/getuser?id=1 HTTP/1.1" 200 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
