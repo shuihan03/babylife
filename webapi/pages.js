@@ -1,5 +1,6 @@
 let express = require("express");
 let path=require('path')
+let fs=require('fs')
 let router = express.Router();
 
 
@@ -16,8 +17,8 @@ router.get('/index.htm', function (req, res) {
   router.post('/file_upload', function (req, res) {
  
     console.log(req.files[0]);  // 上传的文件信息
-  
-    var des_file = __dirname + "/" + req.files[0].originalname;
+    //文件路径
+    var des_file = path.resolve( __dirname,'../files')+"/"  + req.files[0].originalname;
     fs.readFile( req.files[0].path, function (err, data) {
          fs.writeFile(des_file, data, function (err) {
           if( err ){

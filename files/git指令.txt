@@ -1,0 +1,34 @@
+1 git status 显示有需要提交的
+2 git add .  //所有改动文件
+3 git commit -m "注释" //提交
+4 git push  上传
+
+
+
+切换分支
+  git checkout gaojian 切换到gaojian分支
+ git branch 查看分支列表
+ git branch gaojian  新建分支
+
+git push --set-upstream origin gaojian 第一次提交分支
+
+git push 以后提交时
+
+git clone -b Develop
+
+
+git stash 本地改变推到缓存，撤销
+git pull 再拉取
+git stash pop 本地从缓存拉回，然后编辑冲突
+
+
+忽略的文件夹
+输入 touch .gitignore ，生成“.gitignore”文件。
+、在”.gitignore” 文件里输入你要忽略的文件夹及其文件就可以了。（注意格式）
+https://blog.csdn.net/jiandan1127/article/details/81205530
+我的.gitignore
+
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
