@@ -3,10 +3,10 @@
  * 数据库配置
  */
 var dbconfig={
-    "host":"localhost",
-    "user" : "root",
-    "password" : "870801",
-    "database" : "babylife"
+    host:"localhost",
+    user : "root",
+    password : "870801",
+    database : "babylife"
 }
 //配置中心
 var configCenter={
